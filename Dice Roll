@@ -1,0 +1,7 @@
+import random
+print("Roll the dice?")
+x = raw_input()
+if x == "Y" or "Yes":
+	print("You got " + str(random.randint(1, 6)) + " and " + str(random.randint(1,6)) + "!")
+#throw
+#Roll the Dice? Throw

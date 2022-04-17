@@ -1,0 +1,31 @@
+# print([2, 3, 1].index(1))
+
+score = 0
+word = input("Which word do they have to guess?")
+l = 0
+x = len(word)
+y = ""
+for l in range(0,len(word)): 
+	y+="_"
+	l+=1
+
+while score < 8:
+	l = 0
+	g = input("Guess a letter.")
+	l = 0
+	tempy = y
+
+	for l in range(0,len(word)):
+		if word[l] == g: 
+			y = y[0:l] + g + y[l+1:len(word)] # this works
+		l += 1
+	
+	if y == tempy:
+		score += 1
+		print("You have " + str(8-score) + " guesses left.")
+
+	print(y)
+
+	if y == word:
+		score = 8
+		print("Congratulations! You guessed the word correctly.")

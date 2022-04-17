@@ -1,0 +1,16 @@
+# Guess the number
+import random
+x = random.randint(1,100)
+i = 10
+print("Take a guess.")
+while i > 0:
+	y = int(input())
+	if x == y:
+		print("Well done! You guessed the number.")
+		i = 0
+	elif y > x:
+		i -= 1
+		print("Your guess is too high! You have " + str(i) + " guesses left.")
+	elif y < x:
+		i -= 1
+		print("Your guess is too low! You have " + str(i) + " guesses left.")
